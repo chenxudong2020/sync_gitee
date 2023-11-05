@@ -34,11 +34,8 @@ jobs:
           url: ${{ github.event.inputs.applications }}
       
       - name: Async Github Branch To Gitee
-        uses: shanghaobo/github-branch-gitee@v1.0.1
+        uses: abersheeran/sync-gitee-mirror@v1-beta
         with:
-          github_repo: chenxudong2020/sync_gitee
-          github_branch: main
-          gitee_repo: opopop880/sync_gitee
-          gitee_branch: main
+          repository: opopop880/sync_gitee
           username: ${{ secrets.GITEE_USERNAME }}
           password: ${{ secrets.GITEE_PASSWORD }}
