@@ -37,4 +37,4 @@ jobs:
         with:
           username: ${{ secrets.GITEE_USERNAME }}
           password: ${{ secrets.GITEE_PASSWORD }}
-          repository: opopop880/sync_gitee
+          repository: sync_gitee
