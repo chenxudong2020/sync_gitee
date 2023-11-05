@@ -32,4 +32,9 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.MYTOKEN }}
           url: ${{ github.event.inputs.applications }}
-
+      - name: Sync to Gitee
+        uses: pidanmeng/force-sync-gitee-action/action.yml@master
+        with:
+          username: ${{ secrets.GITEE_USERNAME }}
+          password: ${{ secrets.GITEE_PASSWORD }}
+          repository: opopop880/sync_gitee
