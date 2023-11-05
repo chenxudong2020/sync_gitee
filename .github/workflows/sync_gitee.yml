@@ -27,3 +27,13 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.MYTOKEN }}
           url: ${{ github.event.inputs.applications }}
+      
+      - name: Async Github Branch To Gitee
+      - uses: shanghaobo/github-branch-gitee@master
+        with:
+            github_repo: chenxudong2020/sync_gitee
+            github_branch: main
+            gitee_repo: opopop880/github_sync
+            gitee_branch: master
+            username: ${{ secrets.GITEE_USERNAME }}
+            password: ${{ secrets.GITEE_PASSWORD }}    
