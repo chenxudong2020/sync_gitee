@@ -21,10 +21,8 @@ jobs:
         shell: bash
 
     steps:
-      - name: downloadAndUpload
       - uses: actions/checkout@v3
       - uses: wow-actions/download-upload@v1
-        id : downloadAndUpload
         if : ${{ github.event.inputs.applications }} != ''
         with:
           GITHUB_TOKEN: ${{ secrets.MYTOKEN }}
